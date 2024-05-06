@@ -1,23 +1,23 @@
 {
-	"name": "bbdoc/poracleweb",
-	"description": "Web Inteface to handle alarms configuration in PoracleJS",
-	"license": "AGPL-3.0-or-later",
-	"homepage": "https://github.com/bbdoc/PoracleWeb",
-	"authors": [
-		{
-			"name": "bbdoc"
-		}
-	],
-	"require": {
-		"php": ">= 7.0"
-	},
-	"require-dev": {
-		"php-parallel-lint/php-console-highlighter": "0.5.0",
-		"php-parallel-lint/php-parallel-lint": "1.2.0"
-	},
-	"scripts": {
-		"test": [
-			"parallel-lint . --exclude vendor"
-		]
-	}
+  "name": "bbdoc/poracleweb",
+  "description": "Web Inteface to handle alarms configuration in PoracleJS",
+  "license": "AGPL-3.0-or-later",
+  "homepage": "https://github.com/bbdoc/PoracleWeb",
+  "authors": [
+    {
+      "name": "bbdoc"
+    }
+  ],
+  "require": {
+    "php": ">= 7.0"
+  },
+  "require-dev": {
+    "php-parallel-lint/php-console-highlighter": "0.5.0",
+    "php-parallel-lint/php-parallel-lint": "1.2.0"
+  },
+  "scripts": {
+    "test": [
+      "parallel-lint --exclude .git --exclude app --exclude vendor ."
+    ]
+  }
 }

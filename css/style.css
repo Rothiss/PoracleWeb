@@ -1,31 +1,30 @@
-eck/* Style for CheckBoxes Multi Selections */
-
+eck /* Style for CheckBoxes Multi Selections */
 .areasform ul {
-    list-style-type: none;
-    padding-inline-start: unset;
+  list-style-type: none;
+  padding-inline-start: unset;
 }
 
 .areasform ul li {
-    display: inline-block;
+  display: inline-block;
 }
 
 .searchmons ul {
-    list-style-type: none;
-    padding-inline-start: unset;
+  list-style-type: none;
+  padding-inline-start: unset;
 }
 
 .searchmons ul li {
-    display: inline-block;
+  display: inline-block;
 }
 
 .selectionList ul {
-    list-style-type: none;
-    padding-inline-start: unset;
-    text-align:center;
+  list-style-type: none;
+  padding-inline-start: unset;
+  text-align: center;
 }
 
 .selectionList ul li {
-    display: inline-block;
+  display: inline-block;
 }
 
 input[type="checkbox"][id^="mon"],
@@ -43,15 +42,14 @@ input[type="checkbox"][id^="nest"],
 input[type="checkbox"][id^="language"],
 input[type="checkbox"][id^="role"],
 input[type="checkbox"][id^="item"] {
-    display: none;
+  display: none;
 }
 
 input[type="radio"][id^="area"],
 input[type="radio"][id^="profile"],
 input[type="radio"][id^="role"],
-input[type="radio"][id^="uicons_repo"]
-{
-    display: none;
+input[type="radio"][id^="uicons_repo"] {
+  display: none;
 }
 
 label[for^="mon"],
@@ -67,66 +65,65 @@ label[for^="gym"],
 label[for^="nest"],
 label[for^="role"],
 label[for^="item"] {
-    background-color: #858796;
-    color: #ffffff;
-    border-radius: 5px;
-    padding: 5px;
-    display: block;
-    margin: 5px;
-    cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    min-width: 90px;
+  background-color: #858796;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  margin: 5px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 90px;
 }
 
 
-label[for^="uicons_repo"]{
-    cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    min-width: 6:0px;  
-    font-size: 14px; 
-    padding:5px;
-    margin-bottom:10px;
-    border-radius: 5px;
+label[for^="uicons_repo"] {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 6: 0px;
+  font-size: 14px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 label[for^="language"] {
-    border-radius: 5px;
-    padding: 2px;
-    display: block;
-    cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    min-width: 6:0px;
+  border-radius: 5px;
+  padding: 2px;
+  display: block;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 6: 0px;
 }
 
 
 label[for^="target"] {
-    color: #ffffff;
-    display: block;
-    cursor: pointer;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    min-width: 18px;
+  color: #ffffff;
+  display: block;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 18px;
 }
-
 
 
 /* label[for^="mon"] {
@@ -146,149 +143,150 @@ label[for^="target"] {
 } */
 
 label::before {
-    background-color: white;
-    color: white;
-    content: " ";
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    line-height: 28px;
-    transition-duration: 0.4s;
-    transform: scale(0);
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
 }
 
 label img {
-    height: 50px;
-    width: 50px;
-    transition-duration: 0.2s;
-    transform-origin: 50% 50%;
+  height: 50px;
+  width: 50px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
 }
 
-:checked+label[for^="mon"], 
-:checked+label[for^="egg"], 
-:checked+label[for^="raid"], 
-:checked+label[for^="area"], 
-:checked+label[for^="profile"], 
-:checked+label[for^="energy"], 
-:checked+label[for^="candy"], 
-:checked+label[for^="grunt"], 
-:checked+label[for^="lure"], 
-:checked+label[for^="gym"], 
-:checked+label[for^="nest"], 
-:checked+label[for^="role"], 
-:checked+label[for^="item"] {
-    border-color: #ddd;
-    position: relative;
-    background-color: #5a5c69;
+:checked + label[for^="mon"],
+:checked + label[for^="egg"],
+:checked + label[for^="raid"],
+:checked + label[for^="area"],
+:checked + label[for^="profile"],
+:checked + label[for^="energy"],
+:checked + label[for^="candy"],
+:checked + label[for^="grunt"],
+:checked + label[for^="lure"],
+:checked + label[for^="gym"],
+:checked + label[for^="nest"],
+:checked + label[for^="role"],
+:checked + label[for^="item"] {
+  border-color: #dddddd;
+  position: relative;
+  background-color: #5a5c69;
 }
 
 label[for^="uicons_repo"] {
-    border-color: #ddd;
-    position: relative;
-    background-color: grey;
-    color: white;
+  border-color: #dddddd;
+  position: relative;
+  background-color: grey;
+  color: white;
 }
 
-:checked+label[for^="uicons_repo"] {
-    border-color: #ddd;
-    position: relative;
-    background-color: #60da9a;
-    color: white;
-}
-
-
-:checked+label[for^="language"] {
-    border-color: #ddd;
-    position: relative;
+:checked + label[for^="uicons_repo"] {
+  border-color: #dddddd;
+  position: relative;
+  background-color: #60da9a;
+  color: white;
 }
 
 
-:checked+label[for^="target"] {
-    border-color: #ddd;
-    position: relative;
+:checked + label[for^="language"] {
+  border-color: #dddddd;
+  position: relative;
 }
 
 
-:checked+label[for^="mon"]::before,
- :checked+label[for^="egg"]::before,
- :checked+label[for^="raid"]::before,
- :checked+label[for^="area"]::before,
- :checked+label[for^="profile"]::before,
- :checked+label[for^="target"]::before,
- :checked+label[for^="energy"]::before,
- :checked+label[for^="candy"]::before,
- :checked+label[for^="grunt"]::before,
- :checked+label[for^="lure"]::before,
- :checked+label[for^="gym"]::before,
- :checked+label[for^="nest"]::before,
- :checked+label[for^="role"]::before,
- :checked+label[for^="item"]::before {
-    content: "✓";
-    color: #ffffff;
-    background-color: #60da9a;
-    transform: scale(1);
-    position: absolute;
-}
-
-:checked+label[for^="uicons_repo"]::before {
-    content: "✓";
-    color: #ffffff;
-    background-color: #60da9a;
-    transform: scale(1);
-    position: top; border: 1px solid white;
-}
-
-:checked+label[for^="language"]::before {
-    content: "✓";
-    color: #ffffff;
-    background-color: #60da9a;
-    transform: scale(1);
-    position: absolute; 
+:checked + label[for^="target"] {
+  border-color: #dddddd;
+  position: relative;
 }
 
 
-:checked+label img {
-    transform: scale(0.9);
-    /* box-shadow: 0 0 5px #333; */
-    z-index: -1;
+:checked + label[for^="mon"]::before,
+:checked + label[for^="egg"]::before,
+:checked + label[for^="raid"]::before,
+:checked + label[for^="area"]::before,
+:checked + label[for^="profile"]::before,
+:checked + label[for^="target"]::before,
+:checked + label[for^="energy"]::before,
+:checked + label[for^="candy"]::before,
+:checked + label[for^="grunt"]::before,
+:checked + label[for^="lure"]::before,
+:checked + label[for^="gym"]::before,
+:checked + label[for^="nest"]::before,
+:checked + label[for^="role"]::before,
+:checked + label[for^="item"]::before {
+  content: "✓";
+  color: #ffffff;
+  background-color: #60da9a;
+  transform: scale(1);
+  position: absolute;
+}
+
+:checked + label[for^="uicons_repo"]::before {
+  content: "✓";
+  color: #ffffff;
+  background-color: #60da9a;
+  transform: scale(1);
+  position: top;
+  border: 1px solid white;
+}
+
+:checked + label[for^="language"]::before {
+  content: "✓";
+  color: #ffffff;
+  background-color: #60da9a;
+  transform: scale(1);
+  position: absolute;
+}
+
+
+:checked + label img {
+  transform: scale(0.9);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
 }
 
 .cardlist {
-    padding-right: 0.3rem;
-    padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-left: 0.3rem;
 }
 
 .list-group-item {
-    padding: 0.2rem 0.3rem;
-    font-size: 13px;
+  padding: 0.2rem 0.3rem;
+  font-size: 13px;
 }
 
 .profile_button {
-    padding:5px; 
-    padding-left:15px; 
-    padding-right:15px; 
-    border-radius: 5px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
 }
 
 .border-top-Harmony {
-    border-top: 0.25rem solid #858796 !important;
+  border-top: 0.25rem solid #858796 !important;
 }
 
 .border-top-Valor {
-    border-top: 0.25rem solid #e74a3b !important;
+  border-top: 0.25rem solid #e74a3b !important;
 }
 
 .border-top-Instinct {
-    border-top: 0.25rem solid #f6c23e !important;
+  border-top: 0.25rem solid #f6c23e !important;
 }
 
 .border-top-Mystic {
-    border-top: 0.25rem solid #4e73df !important;
+  border-top: 0.25rem solid #4e73df !important;
 }
 
 .bootstrap-select .btn {

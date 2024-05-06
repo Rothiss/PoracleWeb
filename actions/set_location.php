@@ -4,54 +4,53 @@ include_once "../config.php";
 include_once "../include/db_connect.php";
 include_once "../include/functions.php";
 
-
-if ( isset($_GET['action']) && $_GET['action'] == "delete" ) {
-
+if (isset($_GET['action']) && $_GET['action'] == "delete") {
   $lat = "0.0000000000";
   $lon = "0.0000000000";
 
-  $sql = "UPDATE monsters set distance = 0 WHERE id = '" . $_SESSION['id'] . "' AND profile_no = '".$_SESSION['profile']."'";
+  $sql = "UPDATE monsters set distance = 0 WHERE id = '" . $_SESSION['id'] . "' AND profile_no = '" . $_SESSION['profile'] . "'";
   $result = $conn->query($sql);
-  $sql = "UPDATE raid set distance = 0 WHERE id = '" . $_SESSION['id'] . "' AND profile_no = '".$_SESSION['profile']."'";
+  $sql = "UPDATE raid set distance = 0 WHERE id = '" . $_SESSION['id'] . "' AND profile_no = '" . $_SESSION['profile'] . "'";
   $result = $conn->query($sql);
-  $sql = "UPDATE egg set distance = 0 WHERE id = '" . $_SESSION['id'] . "' AND profile_no = '".$_SESSION['profile']."'";
+  $sql = "UPDATE egg set distance = 0 WHERE id = '" . $_SESSION['id'] . "' AND profile_no = '" . $_SESSION['profile'] . "'";
   $result = $conn->query($sql);
-  $sql = "UPDATE quest set distance = 0 WHERE id = '" . $_SESSION['id'] . "' AND profile_no = '".$_SESSION['profile']."'";
+  $sql = "UPDATE quest set distance = 0 WHERE id = '" . $_SESSION['id'] . "' AND profile_no = '" . $_SESSION['profile'] . "'";
   $result = $conn->query($sql);
-  $sql = "UPDATE invasion set distance = 0 WHERE id = '" . $_SESSION['id'] . "' AND profile_no = '".$_SESSION['profile']."'";
+  $sql = "UPDATE invasion set distance = 0 WHERE id = '" . $_SESSION['id'] . "' AND profile_no = '" . $_SESSION['profile'] . "'";
   $result = $conn->query($sql);
-
-} else if ( isset($_GET['lat']) &&  isset($_GET['lon']) ) {
-
-   $lat = $_GET['lat'];
-   $lon = $_GET['lon'];
-
 } else {
+  if (isset($_GET['lat']) && isset($_GET['lon'])) {
+    $lat = $_GET['lat'];
+    $lon = $_GET['lon'];
+  } else {
+    $street = str_replace(" ", "%20", $_POST['street']);
+    $city = str_replace(" ", "%20", $_POST['city']);
 
-   $street = str_replace(" ", "%20", $_POST['street']);
-   $city = str_replace(" ", "%20", $_POST['city']);
+    $filepath = $_SESSION['providerURL'] . "/?addressdetails=1&q=" . $street . "%20" . $city . "&format=json&limit=1";
+    if (strlen($_SESSION['staticKey']) == 32) {
+      $filepath .= "&key=" . $_SESSION['staticKey'];
+    }
 
-   $filepath=$_SESSION['providerURL']."/?addressdetails=1&q=".$street."%20".$city."&format=json&limit=1";
-   if ( strlen($_SESSION['staticKey']) == 32  ) { 
-	   $filepath.="&key=".$_SESSION['staticKey'];
-   }
+    $request = file_get_contents($filepath);
 
-   $request = file_get_contents($filepath);
-
-   if ( $request == "[]" ) { 
+    if ($request == "[]") {
       header("Location: $redirect_url?type=display&page=area&return=error_update_location");
       exit();
-   }   
+    }
 
-   $json = json_decode($request, true);
+    $json = json_decode($request, true);
 
-   foreach ($json as $key => $value) { 
-      foreach ($value as $key => $value2) { 
-         if ($key == "lat") { $lat = $value2; }
-         if ($key == "lon") { $lon = $value2; }
+    foreach ($json as $key => $value) {
+      foreach ($value as $key => $value2) {
+        if ($key == "lat") {
+          $lat = $value2;
+        }
+        if ($key == "lon") {
+          $lon = $value2;
+        }
       }
-   }
-
+    }
+  }
 }
 
 // Update Lat and Lon from Humans if current profile is active
@@ -90,14 +89,12 @@ if (false === $rs) {
   exit();
 }
 
-
-if ( isset($_POST['delete']) ) {
-    header("Location: $redirect_url?type=display&page=area&return=success_delete_location");
-    exit();
+if (isset($_POST['delete'])) {
+  header("Location: $redirect_url?type=display&page=area&return=success_delete_location");
+  exit();
 } else {
-    header("Location: $redirect_url?type=display&page=area&return=success_update_location");
-    exit();
+  header("Location: $redirect_url?type=display&page=area&return=success_update_location");
+  exit();
 }
-
 
 ?>

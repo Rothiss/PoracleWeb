@@ -5,11 +5,11 @@
 // $dbname should then be a comma separated list of values
 // Users should register to only one DB or tool will redirect them randomly
 
-$dbhost     = "127.0.0.1";
-$dbname     = "";
-$dbuser     = "";
-$dbpass     = "";
-$dbport     = "3306";
+$dbhost = "127.0.0.1";
+$dbname = "";
+$dbuser = "";
+$dbpass = "";
+$dbport = "3306";
 
 // Discord Configuration
 $redirect_url = "";
@@ -25,8 +25,7 @@ $discordBotClientSecret = "";
 #$telegram_bot_name = "YourBotToken";
 
 // Admin User
-$admin_id   = "";
-
+$admin_id = "";
 
 // ALL SETTINGS AS FROM HERE ARE OPTIONAL
 

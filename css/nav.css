@@ -1,7 +1,8 @@
 .nav-icon {
-  color:#999c9f;
+  color: #999c9f;
   cursor: pointer;
 }
+
 .nav-icon:hover {
   color: white !important;
 }
@@ -44,14 +45,15 @@ a.navbar-brand {
   left: 0;
   opacity: 0;
   visibility: hidden;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   transition: opacity .2s linear, visibility .1s, width 1s ease-in;
 }
+
 .screen-overlay.show {
   transition: opacity .5s ease, width 0s;
   opacity: 0.4;
   width: 100%;
-  top:60px;
+  top: 60px;
   visibility: visible;
 }
 
@@ -90,6 +92,7 @@ a.navbar-brand {
   top: 21px;
   font-size: 10px;
 }
+
 .card-header-navbar[aria-expanded="true"]:after {
   content: "\f068"; /* fa-minus */
   font-family: 'Font Awesome\ 5 Free';
@@ -103,8 +106,9 @@ a.navbar-brand {
 .btn:focus {
   box-shadow: none;
 }
+
 .dropdown-item:active {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .border {
