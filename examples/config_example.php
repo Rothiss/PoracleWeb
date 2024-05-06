@@ -12,7 +12,7 @@ $dbpass     = "";
 $dbport     = "3306";
 
 // Discord Configuration
-$redirect_url="";
+$redirect_url = "";
 $discordBotClientId = "";
 $discordBotClientSecret = "";
 
@@ -32,8 +32,7 @@ $admin_id   = "";
 
 // Quests Options
 
-# Mons pokemons will be extracted from DB.
-# If you need other pokemons to added, use this setting.
-# List all Pokemon IDs separated by commas
-$additional_quest_mons="";
-
+# Mons pokémon will be extracted from DB.
+# If you need other pokémon to added, use this setting.
+# List all pokémon ID's separated by commas
+$additional_quest_mons = "";

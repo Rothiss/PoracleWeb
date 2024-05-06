@@ -8,15 +8,15 @@
 </div>
 <!-- CHECK CURRENT DISTANCE SET -->
 <?php
-    $sql = "SELECT distance from monsters WHERE id = '" . $_SESSION['id'] . "' GROUP by distance";
+$sql = "SELECT distance from monsters WHERE id = '" . $_SESSION['id'] . "' GROUP by distance";
     $result = $conn->query($sql);
-    if ($result->num_rows == 1) {
-            while ($row = $result->fetch_assoc()) {
-                    $distance_set = $row['distance'];
-            }
-    } else {
-            $distance_set = 0;
+if ($result->num_rows == 1) {
+    while ($row = $result->fetch_assoc()) {
+            $distance_set = $row['distance'];
     }
+} else {
+        $distance_set = 0;
+}
 ?>
 <form action='./actions/monsters.php?action=update_mons_distance' method='POST'>
 <div class="modal-body">
@@ -29,7 +29,7 @@
                    <div class="input-group-text"><?php echo i8ln("Distance"); ?></div>
                </div>
                <input type='hidden' id='type' name='type' value='monsters'>
-	       <input type="number" id='distance' name='distance' value='<?php echo $distance_set; ?>' min='0'
+           <input type="number" id='distance' name='distance' value='<?php echo $distance_set; ?>' min='0'
                    max='<?php echo $_SESSION['maxDistance']; ?>'
                    class="form-control text-center">
                <div class="input-group-append">
